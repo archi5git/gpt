@@ -1,8 +1,8 @@
-const express=require('express');
-const authModel=require('../controller/auth.controller');
+const express=require('express')
+const authControllers=require('../controllers/auth.controller')
+const router=express.Router()
 
-const router=express.Router();
-router.post('/register',authModel.registerUser);
-router.post('/login',authModel.loginUser);
+router.post('/register', authControllers.registerUser)
+router.post('/login', authControllers.loginUser)
 
-module.exports=router;
+module.exports=router
