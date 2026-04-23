@@ -1,5 +1,5 @@
 const { Server } = require("socket.io");
-import { Vector } from './../../node_modules/@pinecone-database/pinecone/dist/pinecone-generated-ts-fetch/db_data/models/Vector.d';
+//const('./../../node_modules/@pinecone-database/pinecone/dist/pinecone-generated-ts-fetch/db_data/models/Vector.d');
 const cookie=require("cookie")
 const jwt=require("jsonwebtoken");
 const userModel=require("../models/user.model");
@@ -31,8 +31,7 @@ function initSocketServer(httpServer) {
             messagepayload={
             message:message from user,
             chat:chatId
-             */
-            console.log(messagePayload);   
+             console.log(messagePayload);*/ 
             await messageModel.create({
                 
                 chat:messagePayload.chat,

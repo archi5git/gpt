@@ -1,6 +1,6 @@
 const { Pinecone } = require('@pinecone-database/pinecone');
 
-const pc = new Pinecone(process.env.PINECONE_API_KEY);
+const pc = new Pinecone({ apiKey: process.env.PINECONE_API_KEY });
 const chatgpt2 = pc.index('chatgpt2-0');
 async function createMemory({vector,metadata,messageId}){
     const results=await chatgpt2.upsert([{
